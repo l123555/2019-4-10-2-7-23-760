@@ -10,7 +10,9 @@ module.exports = function main(inputs) {
 	else if (inputs["distance"] <= 8){
 		distance_price = 6 + 0.8 * (inputs["distance"] - 2); 
 	}
-	
+	else{
+		distance_price = 6 + 0.8 * 6 + 0.8 * 1.5 * (inputs["distance"] - 8);
+	}
 	time_price = inputs["parkTime"]*0.25;
 	
 	price = Math.round(distance_price + time_price);
